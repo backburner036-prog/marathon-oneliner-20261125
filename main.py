@@ -1,18 +1,18 @@
-"""One line: a one-liner comedy joke for the marathon.
+"""One-liner entry for make.fun: one line, at most 280 chars.
 
-Writes a single line (127 chars, cap 280) to /output/entry.txt.
+The program writes LINE verbatim to /output/entry.txt (127 chars).
 """
 
 from pathlib import Path
 
 LINE = "My password manager locked me out for entering the wrong master password, which it had been autofilling incorrectly for a year."
-
-OUT = Path("/output/entry.txt")
+ENTRY_PATH = Path("/output/entry.txt")
 
 
 def main() -> None:
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(LINE, encoding="utf-8")
+    """Write the entry text, creating /output when needed."""
+    ENTRY_PATH.parent.mkdir(parents=True, exist_ok=True)
+    ENTRY_PATH.write_text(LINE, encoding="utf-8")
 
 
 if __name__ == "__main__":
