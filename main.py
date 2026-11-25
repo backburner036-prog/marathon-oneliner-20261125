@@ -1,6 +1,6 @@
 """One line: a one-liner comedy joke for the marathon.
 
-Writes a single line to /output/entry.txt.
+Writes a single line (127 chars, cap 280) to /output/entry.txt.
 """
 
 from pathlib import Path
